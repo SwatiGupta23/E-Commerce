@@ -1,16 +1,59 @@
-<!-- @extends('app')
+@extends('app')
 
 @section('content')
 
-<div class='container'>
-    <div class='row'>
-        
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-5">
+            <div class="card shadow">
+                <div class="card-header bg-dark text-white text-center">
+                    <h4 id="formTitle">Login Form</h4>
+                </div>
+
+                <div class="card-body">
+                    <!-- Login Form -->
+                    <form method="POST"
+                          action="/login">
+                        @csrf
+                        <div class="mb-3">
+                            <label class="form-label">Email Address</label>
+                            <input type="email" name="email"
+                                   class="form-control"
+                                   value=""
+                                   placeholder="Enter email" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Password</label>
+                            <input type="password" name="password"
+                                   class="form-control"
+                                   placeholder="Enter password" required>
+                        </div>
+
+                        <button type="submit"
+                                class="btn btn-dark w-100">
+                            Login
+                        </button>
+
+                        <p class="text-center mt-3">
+                            Don't have an account?
+                            <a href="#">
+                                Register
+                            </a>
+                        </p>
+                    </form>
+
+                  
+                </div>
+            </div>
+
+        </div>
+    </div>
 </div>
-</div>
 
-@endSection('') -->
+@endSection('')
 
-
+<!-- 
 <!doctype html>
 <html lang="en">
 <head>
@@ -50,7 +93,7 @@
                         </div>
                     @endif
 
-                    <!-- Login Form -->
+                    <!-- Login Form --
                     <form id="loginForm" method="POST"
                           action="">
                         @csrf
@@ -83,7 +126,7 @@
                         </p>
                     </form>
 
-                    <!-- Register Form -->
+                    <!-- Register Form --
                     <form id="registerForm" method="POST"
                           action=""
                           style="display:none;">
@@ -155,4 +198,4 @@
 </script>
 
 </body>
-</html>
+</html> -->
